@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&display=swap');
+$titleFont: Oswald, sans-serif;
+$bodyFont: Poppins, sans-serif;
+$primaryColor: #1f3e72;
+$primaryColorHover: #0b2247;
+$secondaryColor: #ffa500;
+$textColor: #8c8b8b;
+
+body,
+html {
+    background-color: rgb(245, 245, 245);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $textColor;
+};
+
+h2 {
+    font: 100% $titleFont;
+    color: $primaryColor;
+    font-weight: 600;
+    font-size: 24px;
+};

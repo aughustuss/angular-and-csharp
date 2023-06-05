@@ -10,11 +10,23 @@ import { HeroService } from './services/hero.service';
 export class AppComponent {
   title = 'AngularUI';
   heroes: Hero[] = [];
+  heroeToEdit?: Hero;
 
-  constructor (private heroService: HeroService){};
+  constructor(private heroService: HeroService) { };
 
   ngOnInit(): void {
-    this.heroes = this.heroService.getHeroes();
-    console.log(this.heroes);
+    this.heroService.getHeroes().subscribe((result: Hero[]) => (this.heroes = result));
+  };
+
+  updateHeroList(heroes: Hero[]){
+    this.heroes = heroes;
+  }
+
+  createNewHero() {
+    this.heroeToEdit = new Hero();
+  };
+
+  editHero(hero: Hero) {
+    this.heroeToEdit = hero;
   }
 }

@@ -1,0 +1,43 @@
+@import '../styles.scss';
+
+table {
+    border: 1px solid $textColor;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: white;
+    thead {
+        width: 100%;
+        th {
+            color: $primaryColor;
+            font: 100% $titleFont;
+            font-weight: 600;
+            border: 1px solid $textColor;
+            border-radius: 5px;
+            padding: 5px;
+        };
+    };
+
+    tbody {
+        tr {
+            td {
+                font: 100% $bodyFont;
+                font-size: 14px;
+                button {
+                    background-color: $primaryColor;
+                    outline: none;
+                    border-radius: 5px;
+                    padding: 5px;
+                    color: white;
+                    font: 100% $bodyFont;
+                    min-width: 70px;
+                    cursor: pointer;
+                    font-size: 12px;
+                    &:hover {
+                        background-color: $primaryColorHover;
+                        transition: all 200ms ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,5 @@
+<button (click)="createNewHero()" >Criar novo herói</button>
+
 <table>
   <thead>
     <th>Hero Name</th>
@@ -11,6 +13,9 @@
       <td>{{hero.firstName}}</td>
       <td>{{hero.lastName}}</td>
       <td>{{hero.place}}</td>
+      <td><button (click)="editHero(hero)" >Editar</button></td>
     </tr>
   </tbody>
 </table>
+
+<app-hero-edit [hero]="heroeToEdit" (heroesUpadated)="updateHeroList($event)" ></app-hero-edit>
