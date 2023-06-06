@@ -1,6 +1,6 @@
 export class Hero {
     id?: number;
-    heroName = 'Spider Man';
+    heroName = '';
     firstName = '';
     lastName = '';
     place = '';

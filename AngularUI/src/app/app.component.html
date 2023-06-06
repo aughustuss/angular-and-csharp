@@ -1,21 +1,22 @@
-<button (click)="createNewHero()" >Criar novo herói</button>
+<div class="mainDiv">
+  <button (click)="createNewHero()">Criar novo herói</button>
+  <table>
+    <thead>
+      <th>Hero Name</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Location</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hero of heroes">
+        <td>{{hero.heroName}}</td>
+        <td>{{hero.firstName}}</td>
+        <td>{{hero.lastName}}</td>
+        <td>{{hero.place}}</td>
+        <td><button (click)="editHero(hero)">Editar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-<table>
-  <thead>
-    <th>Hero Name</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Location</th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let hero of heroes"> 
-      <td>{{hero.heroName}}</td>
-      <td>{{hero.firstName}}</td>
-      <td>{{hero.lastName}}</td>
-      <td>{{hero.place}}</td>
-      <td><button (click)="editHero(hero)" >Editar</button></td>
-    </tr>
-  </tbody>
-</table>
-
-<app-hero-edit [hero]="heroeToEdit" (heroesUpadated)="updateHeroList($event)" ></app-hero-edit>
+<app-hero-edit [hero]="heroeToEdit" (heroesUpadated)="updateHeroList($event)"></app-hero-edit>

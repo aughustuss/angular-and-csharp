@@ -19,11 +19,14 @@ export class HeroEditComponent {
 
   updateHero(hero: Hero){
     this.heroServices.updateHero(hero).subscribe((heroes: Hero[]) => this.heroesUpadated.emit(heroes));
+    alert('Herói atualizado com sucesso.');
   }
   deleteHero(hero: Hero){
     this.heroServices.deleteHero(hero).subscribe((heroes: Hero[]) => this.heroesUpadated.emit(heroes));
+    alert('Herói deletado com sucesso.');
   }
   createHero(hero: Hero){
     this.heroServices.createHero(hero).subscribe((heroes: Hero[]) => this.heroesUpadated.emit(heroes));
+    alert('Herói criado com sucesso.');
   }
 }
