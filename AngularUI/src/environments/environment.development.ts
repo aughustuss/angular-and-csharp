@@ -1,4 +1,4 @@
 export const environment = {
-    production: false,
-    apiUrl: "https://localhost:7219/api",
+    production: true,
+    apiUrl: "https://sql-server-portfolio.azurewebsites.net/api",
 };
