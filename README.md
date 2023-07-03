@@ -17,11 +17,24 @@ Uma aplicação simples com a funcionalidade de realizar um CRUD de super héroi
 
 ## Instalação
 
-Instale angularui com npm
+Instale o projeto
 
 ```bash
-  cd AngularUI
   npm i
+```
+
+```bash
+  pnpm i
+```
+
+```bash
+  yarn add
+```
+
+Rode o projeto
+
+```bash
+  ng serve -o
 ```
     
 ## Link para o projeto 
